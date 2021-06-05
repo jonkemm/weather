@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container my-5 mx-auto">
+      <h1 class="text-muted text-center my-4">Wheeliemanuk weather</h1>
+      <form class="text-center text-muted my-4 change-location">
+        <label for="city">Enter location</label>
+        <input name="city" type="text" class="form-control p4" />
+      </form>
+      <div class="card shadow-lg rounded d-none">
+        <img
+          src="https://via.placeholder.com/400x300"
+          alt=""
+          class="card-img-top time"
+        />
+        <div class="icon mx-auto text-center bg-light">
+          <img src="" alt="" />
+        </div>
+        <div class="text-center text-muted text-uppercase details">
+          <h5 class="my-3">City name</h5>
+          <div class="my-3">Weather condition</div>
+          <div class="my-4 display-4">
+            <span>temp</span>
+            <span>&deg;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/app.js" async defer></script>
+    <script src="./scripts/forecast.js" async defer></script>
+  </body>
+</html>
