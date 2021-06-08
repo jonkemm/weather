@@ -1,6 +1,6 @@
 /* dom */
 body {
-  background-color: #eeedec;
+  background-color: #fccc9c;
   letter-spacing: 0.2em;
   font-size: 0.8em;
 }
@@ -14,4 +14,10 @@ body {
   border-radius: 50%;
   width: 100px;
   margin-bottom: -50px;
+}
+.card {
+  background-color: #f5ae66;
+}
+.details {
+  color: aliceblue !important;
 }
