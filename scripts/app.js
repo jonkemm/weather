@@ -1,8 +1,10 @@
+// Query selectors
 const cityForm = document.querySelector("form");
 const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
+// UI 'function'
 const updateUi = (data) => {
   const cityDets = data.cityDets;
   const weather = data.weather;
@@ -17,7 +19,7 @@ const updateUi = (data) => {
   const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
   icon.setAttribute("src", iconSrc);
   let timeSrc = null;
-  if (weather.IsDyTime) {
+  if (weather.IsDayTime) {
     timeSrc = "img/day.svg";
   } else {
     timeSrc = "img/night.svg";
@@ -27,12 +29,14 @@ const updateUi = (data) => {
     card.classList.remove("d-none");
   }
 };
+// updateCity 'function'
 const updateCity = async (city) => {
   const cityDets = await getCity(city);
   const weather = await getWeather(cityDets.Key);
 
   return { cityDets, weather };
 };
+// form submit 'function'
 cityForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const city = cityForm.city.value.trim();
